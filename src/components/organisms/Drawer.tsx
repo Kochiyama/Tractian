@@ -27,8 +27,8 @@ export function Drawer() {
 				<DrawerOverlay />
 				<DrawerContent bgColor='brand.200' color='primary.100'>
 					<DrawerCloseButton />
-					<DrawerBody p='1rem' mt='2rem'>
-						<NavigationBar flexDir='column' alignItems='flex-start' />
+					<DrawerBody p='1rem'>
+						<NavigationBar direction='column' alignItems='flex-start' />
 					</DrawerBody>
 
 					<DrawerFooter>

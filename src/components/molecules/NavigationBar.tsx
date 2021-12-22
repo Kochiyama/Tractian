@@ -1,4 +1,4 @@
-import { HStack, StackProps } from '@chakra-ui/react'
+import { Stack, StackProps } from '@chakra-ui/react'
 import { NavigationLink } from '../atoms/NavigationLink'
 import { NavigationMenu } from '../atoms/NavigationMenu'
 
@@ -6,7 +6,7 @@ interface Props extends StackProps {}
 
 export function NavigationBar({ ...rest }: Props) {
 	return (
-		<HStack {...rest}>
+		<Stack direction='row' {...rest}>
 			<NavigationMenu
 				menuItems={[
 					{
@@ -108,6 +108,6 @@ export function NavigationBar({ ...rest }: Props) {
 			<NavigationLink href='https://app.tractian.com/login' isExternal>
 				Customer Area
 			</NavigationLink>
-		</HStack>
+		</Stack>
 	)
 }
