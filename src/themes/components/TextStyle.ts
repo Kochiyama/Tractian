@@ -1,6 +1,6 @@
 import { ComponentStyleConfig } from '@chakra-ui/react'
 
-export const Text: ComponentStyleConfig = {
+export const TextStyle: ComponentStyleConfig = {
 	baseStyle: {
 		fontWeight: 'normal',
 	},

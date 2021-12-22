@@ -1,6 +1,6 @@
 import { ComponentStyleConfig } from '@chakra-ui/react'
 
-export const Heading: ComponentStyleConfig = {
+export const HeadingStyle: ComponentStyleConfig = {
 	baseStyle: {
 		fontWeight: 500,
 	},
