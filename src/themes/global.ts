@@ -7,4 +7,10 @@ export const global = {
 	':root': {
 		fontSize: '16px',
 	},
+	a: {
+		textDecoration: 'none',
+	},
+	body: {
+		backgroundColor: 'primary.100',
+	},
 }

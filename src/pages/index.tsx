@@ -1,17 +1,13 @@
+import { Box, Button, Center, Heading, Text } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { MainTemplate } from '../components/templates/MainTemplate'
 
 const Home: NextPage = () => {
 	return (
-		<>
-			<Head>
-				<title>TRACTIAN | Kochiyama&apos;s redesign and implementation</title>
-			</Head>
-
-			<div>
-				<h1>Landing page</h1>
-			</div>
-		</>
+		<MainTemplate>
+			<Heading>Home</Heading>
+		</MainTemplate>
 	)
 }
 
