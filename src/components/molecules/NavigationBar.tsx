@@ -1,10 +1,12 @@
-import { HStack } from '@chakra-ui/react'
+import { HStack, StackProps } from '@chakra-ui/react'
 import { NavigationLink } from '../atoms/NavigationLink'
 import { NavigationMenu } from '../atoms/NavigationMenu'
 
-export function NavigationBar() {
+interface Props extends StackProps {}
+
+export function NavigationBar({ ...rest }: Props) {
 	return (
-		<HStack>
+		<HStack {...rest}>
 			<NavigationMenu
 				menuItems={[
 					{
