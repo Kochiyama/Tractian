@@ -2,13 +2,11 @@ import {
 	Drawer as ChakraDrawer,
 	DrawerBody,
 	DrawerFooter,
-	DrawerHeader,
 	DrawerOverlay,
 	DrawerContent,
 	DrawerCloseButton,
 	Button,
 	useDisclosure,
-	Center,
 	Flex,
 } from '@chakra-ui/react'
 import { GiHamburgerMenu } from 'react-icons/gi'

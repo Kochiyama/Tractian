@@ -1,9 +1,6 @@
-import { Center, Container, Flex } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
 import Head from 'next/head'
 import { ReactNode } from 'react'
-import { LanguageSelect } from '../atoms/LanguageSelect'
-import { Logo } from '../atoms/Logo'
-import { NavigationBar } from '../molecules/NavigationBar'
 import { Header } from '../organisms/Header'
 
 interface Props {

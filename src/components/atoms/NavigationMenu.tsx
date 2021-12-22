@@ -4,12 +4,10 @@ import {
 	MenuProps,
 	Button,
 	MenuList,
-	MenuItem,
 	VStack,
 	Box,
 } from '@chakra-ui/react'
 import { FiChevronDown } from 'react-icons/fi'
-import { NavigationLink } from './NavigationLink'
 import {
 	NavigationMenuLink,
 	NavigationMenuLinkProps,
