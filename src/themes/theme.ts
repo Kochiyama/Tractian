@@ -5,6 +5,7 @@ import { HeadingStyle } from './components/HeadingStyle'
 import { TextStyle } from './components/TextStyle'
 import { global } from './global'
 import { ButtonStyle } from './components/ButtonStyle'
+import { ContainerStyle } from './components/ContainerStyle'
 
 export const theme = extendTheme({
 	colors: colorScheme,
@@ -16,5 +17,6 @@ export const theme = extendTheme({
 		Heading: HeadingStyle,
 		Text: TextStyle,
 		Button: ButtonStyle,
+		Container: ContainerStyle,
 	},
 })
