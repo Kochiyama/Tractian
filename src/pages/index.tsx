@@ -10,8 +10,8 @@ import {
 	Center,
 } from '@chakra-ui/react'
 import type { NextPage } from 'next'
-import { FeaturesTabs } from '../components/organisms/FeaturesTabs'
-import { ProductCard } from '../components/organisms/ProductCard'
+import { FeaturesTabs } from '../components/molecules/FeaturesTabs'
+import { ProductCard } from '../components/molecules/ProductCard'
 import { MainTemplate } from '../components/templates/MainTemplate'
 import { Section } from '../components/templates/Section'
 
@@ -102,6 +102,10 @@ const Home: NextPage = () => {
 						url='https://tractian.com/en/sensor-inteligente'
 					/>
 				</Flex>
+			</Section>
+
+			<Section>
+				<HStack></HStack>
 			</Section>
 		</MainTemplate>
 	)
