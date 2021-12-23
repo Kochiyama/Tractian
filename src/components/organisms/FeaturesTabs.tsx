@@ -49,10 +49,14 @@ export function FeaturesTabs({ tabs, panels }: Props) {
 								fontFamily='Poppins'
 								fontWeight='medium'
 								color='secondary.200'
+								_hover={{
+									borderBottom: '3px solid #6B7280',
+								}}
 								_selected={{
 									color: 'brand.100',
 									borderBottom: '3px solid #263476',
 								}}
+								transition='ease 300ms'
 							>
 								{tab}
 							</Tab>
