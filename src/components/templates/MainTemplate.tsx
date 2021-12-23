@@ -19,7 +19,7 @@ export function MainTemplate({ title, description, children }: Props) {
 
 			<Header />
 
-			<Flex flexDir='column' pt='3.1rem' bgColor='brand.200' minH='100vh'>
+			<Flex flexDir='column' pt='3rem'>
 				{children}
 			</Flex>
 		</>
