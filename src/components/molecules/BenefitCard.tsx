@@ -15,9 +15,9 @@ export function BenefitCard({ icon, title, description }: Props) {
 			p='2rem'
 			borderRadius='base'
 			bottom='0rem'
-			boxShadow='md'
-			_hover={{ bottom: '2rem', boxShadow: 'lg' }}
-			transition='ease 500ms'
+			boxShadow='none'
+			_hover={{ bottom: '1rem', boxShadow: 'lg' }}
+			transition='ease 300ms'
 		>
 			<Box>
 				<Image h='5rem' src={icon} alt={title} />
