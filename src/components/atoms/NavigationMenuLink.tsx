@@ -31,7 +31,7 @@ export function NavigationMenuLink({
 						<Heading size='sm' color='secondary.100'>
 							{title}
 						</Heading>
-						<Text fontSize='sm' color='secondary.200'>
+						<Text fontSize='sm' color='secondary.300'>
 							{description}
 						</Text>
 					</LinkOverlay>

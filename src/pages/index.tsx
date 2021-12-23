@@ -9,10 +9,16 @@ import {
 	Button,
 	Center,
 	Grid,
+	Tabs,
+	TabList,
+	Tab,
+	TabPanels,
+	TabPanel,
 } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import { BenefitCard } from '../components/molecules/BenefitCard'
 import { FeaturesTabs } from '../components/molecules/FeaturesTabs'
+import { HowItWorksTabs } from '../components/molecules/HowItWorksTabs'
 import { ProductCard } from '../components/molecules/ProductCard'
 import { MainTemplate } from '../components/templates/MainTemplate'
 import { Section } from '../components/templates/Section'
@@ -108,6 +114,7 @@ const Home: NextPage = () => {
 
 			<Section>
 				<Heading mb='3rem'>Why Tractian?</Heading>
+
 				<Grid gridTemplateColumns='repeat(4, 1fr)' gap='2rem' spacing='2rem'>
 					<BenefitCard
 						icon='/icons/icon-maintence-plataform.svg'
@@ -132,6 +139,65 @@ const Home: NextPage = () => {
 						description='Automate processes, work orders, and have total control over your assets and staff.'
 					/>
 				</Grid>
+			</Section>
+
+			<Section>
+				<Heading>How it works?</Heading>
+				<Text mb='3rem'>
+					Combine monitoring and management, take your pick:
+				</Text>
+
+				<HowItWorksTabs
+					tabs={['Online Monitoring', 'Asset Management']}
+					panels={[
+						{
+							variant: 'brand',
+							items: [
+								{
+									img: '/images/enviamos-o-sensor.png',
+									title: 'We ship the sensors',
+									description:
+										'The sensors are delivered in your site and you don`t need to go throught industrial Wi-fi or talk to IT departments.',
+								},
+								{
+									img: '/images/motobomba-periferico.png',
+									title: 'Attach to your machine',
+									description:
+										'The sensors are delivered in your site and you don`t need to go throught industrial Wi-fi or talk to IT departments.',
+								},
+								{
+									img: '/images/insights-tela-desalinhamento.png',
+									title: 'Get valuable Insights',
+									description:
+										'Our system centralizes accurate information about your machines, with insights and analyzes, such as equipment health, anomaly detection and machine spectrum degradation.',
+								},
+							],
+						},
+						{
+							variant: 'complementar',
+							items: [
+								{
+									img: '/images/planos-preventivos.png',
+									title: 'Send us your list of Assets, Places and Users',
+									description:
+										'We make the platform ready and organized for you, preparing your plant and assets following the layout sent to us, as well as your registered maintainers on the platform.',
+								},
+								{
+									img: '/images/cadastro-os.png',
+									title: 'Automate your Work Plans and Work Orders',
+									description:
+										'Use online procedures to organize checklists and inspections. Sequencing and planning Work Orders preemptively has never been easier.',
+								},
+								{
+									img: '/images/automacoes-e-metricas.png',
+									title: 'Replace Excel completely',
+									description:
+										'The platform will open the Work Orders and distribute them according to the configured automations, allowing the entire maintenance team to worry only about performing their routine activities.',
+								},
+							],
+						},
+					]}
+				/>
 			</Section>
 		</MainTemplate>
 	)

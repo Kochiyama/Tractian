@@ -48,7 +48,7 @@ export function FeaturesTabs({ tabs, panels }: Props) {
 								key={i}
 								fontFamily='Poppins'
 								fontWeight='medium'
-								color='secondary.200'
+								color='secondary.300'
 								_hover={{
 									borderBottom: '3px solid #6B7280',
 								}}
