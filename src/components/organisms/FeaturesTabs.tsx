@@ -31,7 +31,7 @@ export function FeaturesTabs({ tabs, panels }: Props) {
 					{panels.map(panel => (
 						<TabPanel key={panel.title} d='flex'>
 							<Center flex='1' pr='4rem'>
-								<Image h='50vh' src={panel.img} alt={panel.title} />
+								<Image h='20rem' src={panel.img} alt={panel.title} />
 							</Center>
 							<Flex flex='1' flexDir='column' py='3rem'>
 								<Heading size='lg'>{panel.title}</Heading>
