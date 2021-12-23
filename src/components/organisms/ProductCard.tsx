@@ -27,6 +27,8 @@ export function ProductCard({
 			borderRadius='base'
 			flexDir='column'
 			p='2rem'
+			_hover={{ boxShadow: 'lg' }}
+			transition='ease 300ms'
 			{...rest}
 		>
 			<Image h='15rem' objectFit='contain' src={img} alt={title} />
