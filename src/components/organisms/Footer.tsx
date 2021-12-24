@@ -92,7 +92,11 @@ export function Footer() {
 					<Heading size='sm' variant='light' mt='2rem' mb='0.5rem'>
 						INVESTED BY
 					</Heading>
-					<Stack direction={{ base: 'column', md: 'row' }} spacing='2rem'>
+					<Stack
+						direction={{ base: 'column', md: 'row' }}
+						spacing='2rem'
+						alignItems='start'
+					>
 						<Image
 							objectFit='contain'
 							h='2rem'
