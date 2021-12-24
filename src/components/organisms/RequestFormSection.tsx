@@ -51,7 +51,7 @@ export function RequestFormSection() {
 
 				console.log({ ...values, machines })
 
-				// router.reload()
+				router.reload()
 				setIsLoading(false)
 			}, 500)
 		},
