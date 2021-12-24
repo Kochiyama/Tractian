@@ -9,12 +9,6 @@ import {
 	Button,
 	Center,
 	Grid,
-	Tabs,
-	TabList,
-	Tab,
-	TabPanels,
-	TabPanel,
-	Stack,
 } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import { BenefitCard } from '../components/molecules/BenefitCard'
@@ -22,8 +16,11 @@ import { BigTextInfo } from '../components/molecules/BigTextInfo'
 import { FeaturesTabs } from '../components/molecules/FeaturesTabs'
 import { HowItWorksTabs } from '../components/molecules/HowItWorksTabs'
 import { ProductCard } from '../components/molecules/ProductCard'
+import { TestimonialCard } from '../components/molecules/TestimonialCard'
 import { MainTemplate } from '../components/templates/MainTemplate'
 import { Section } from '../components/templates/Section'
+import AliceCarousel from 'react-alice-carousel'
+import 'react-alice-carousel/lib/alice-carousel.css'
 
 const Home: NextPage = () => {
 	return (
@@ -222,6 +219,85 @@ const Home: NextPage = () => {
 						description='REDUCTION OF LAST-MINUTE MAINTENANCE OCCURRENCES.'
 					/>
 				</HStack>
+			</Section>
+
+			<Section bgColor='brand.200'>
+				<Heading mb='3rem' variant='light'>
+					What our customers say about us:
+				</Heading>
+
+				<AliceCarousel
+					disableDotsControls
+					disableButtonsControls
+					mouseTracking
+					responsive={{
+						0: {
+							items: 1,
+						},
+						800: {
+							items: 2,
+						},
+						1024: {
+							items: 2.7,
+						},
+					}}
+					items={[
+						<TestimonialCard
+							testimonial='"Before Tractian, failure happened without us having any chance to
+						react. Now we are able to identify any unusual anomaly and this allows
+						us to intervene before the breakdown happens."'
+							avatar='/icons/eduarda.png'
+							name='Eduarda Bauiz'
+							title='General Director - Food industry'
+						/>,
+						<TestimonialCard
+							testimonial='"Before Tractian, failure happened without us having any chance to
+						react. Now we are able to identify any unusual anomaly and this allows
+						us to intervene before the breakdown happens."'
+							avatar='/icons/eduarda.png'
+							name='Eduarda Bauiz'
+							title='General Director - Food industry'
+						/>,
+						<TestimonialCard
+							testimonial='"Before Tractian, failure happened without us having any chance to
+						react. Now we are able to identify any unusual anomaly and this allows
+						us to intervene before the breakdown happens."'
+							avatar='/icons/eduarda.png'
+							name='Eduarda Bauiz'
+							title='General Director - Food industry'
+						/>,
+						<TestimonialCard
+							testimonial='"Before Tractian, failure happened without us having any chance to
+						react. Now we are able to identify any unusual anomaly and this allows
+						us to intervene before the breakdown happens."'
+							avatar='/icons/eduarda.png'
+							name='Eduarda Bauiz'
+							title='General Director - Food industry'
+						/>,
+						<TestimonialCard
+							testimonial='"Before Tractian, failure happened without us having any chance to
+						react. Now we are able to identify any unusual anomaly and this allows
+						us to intervene before the breakdown happens."'
+							avatar='/icons/eduarda.png'
+							name='Eduarda Bauiz'
+							title='General Director - Food industry'
+						/>,
+					]}
+				/>
+
+				<Flex mt='2rem'>
+					<Image
+						mr='1rem'
+						h='3rem'
+						src='/images/capterra-badge.png'
+						alt='capterra badge'
+					/>
+
+					<Text variant='light'>
+						Named favorite CMMS and <br />
+						OEE solution in Capterra 2021 ranking
+					</Text>
+				</Flex>
 			</Section>
 		</MainTemplate>
 	)
