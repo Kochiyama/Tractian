@@ -7,7 +7,7 @@ interface Props extends ContainerProps {
 
 export function Section({ children, bgColor, ...rest }: Props) {
 	return (
-		<Center bgColor={bgColor} py='4rem'>
+		<Center as='section' bgColor={bgColor} py='4rem'>
 			<Container {...rest}>{children}</Container>
 		</Center>
 	)

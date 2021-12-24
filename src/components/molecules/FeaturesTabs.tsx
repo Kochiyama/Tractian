@@ -25,45 +25,43 @@ interface Props {
 
 export function FeaturesTabs({ tabs, panels }: Props) {
 	return (
-		<Section py='2rem'>
-			<Tabs defaultIndex={1}>
-				<TabPanels>
-					{panels.map(panel => (
-						<TabPanel key={panel.title} d='flex'>
-							<Center flex='1' pr='4rem'>
-								<Image h='20rem' src={panel.img} alt={panel.title} />
-							</Center>
-							<Flex flex='1' flexDir='column' py='3rem'>
-								<Heading size='lg'>{panel.title}</Heading>
-								<Text>{panel.description}</Text>
-							</Flex>
-						</TabPanel>
-					))}
-				</TabPanels>
+		<Tabs defaultIndex={1}>
+			<TabPanels>
+				{panels.map(panel => (
+					<TabPanel key={panel.title} d='flex'>
+						<Center flex='1' pr='4rem'>
+							<Image h='20rem' src={panel.img} alt={panel.title} />
+						</Center>
+						<Flex flex='1' flexDir='column' py='3rem'>
+							<Heading size='lg'>{panel.title}</Heading>
+							<Text>{panel.description}</Text>
+						</Flex>
+					</TabPanel>
+				))}
+			</TabPanels>
 
-				<TabList mt='2rem' d='flex' justifyContent='center' border='none'>
-					<HStack spacing='2rem'>
-						{tabs.map((tab, i) => (
-							<Tab
-								key={i}
-								fontFamily='Poppins'
-								fontWeight='medium'
-								color='secondary.300'
-								_hover={{
-									borderBottom: '3px solid #6B7280',
-								}}
-								_selected={{
-									color: 'brand.100',
-									borderBottom: '3px solid #263476',
-								}}
-								transition='ease 300ms'
-							>
-								{tab}
-							</Tab>
-						))}
-					</HStack>
-				</TabList>
-			</Tabs>
-		</Section>
+			<TabList mt='2rem' d='flex' justifyContent='center' border='none'>
+				<HStack spacing='2rem'>
+					{tabs.map((tab, i) => (
+						<Tab
+							key={i}
+							fontFamily='Poppins'
+							fontWeight='medium'
+							color='secondary.300'
+							_hover={{
+								borderBottom: '3px solid #6B7280',
+							}}
+							_selected={{
+								color: 'brand.100',
+								borderBottom: '3px solid #263476',
+							}}
+							transition='ease 300ms'
+						>
+							{tab}
+						</Tab>
+					))}
+				</HStack>
+			</TabList>
+		</Tabs>
 	)
 }
