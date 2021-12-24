@@ -243,44 +243,28 @@ const Home: NextPage = () => {
 					}}
 					items={[
 						<TestimonialCard
-							testimonial='"Before Tractian, failure happened without us having any chance to
-						react. Now we are able to identify any unusual anomaly and this allows
-						us to intervene before the breakdown happens."'
+							testimonial='"Before Tractian, failure happened without us having any chance to react. Now we are able to identify any unusual anomaly and this allows us to intervene before the breakdown happens."'
+							avatar='/icons/tiago-junqueira.png'
+							name='Tiago Junqueira'
+							title='General Maintenance Supervisor - AmstedMaxion'
+						/>,
+						<TestimonialCard
+							testimonial='"With the Tractian solution we optimize time, reduce costs with failures anticipated by the solution. Their technology is a great tool for monitoring and managing our assets."'
+							avatar='/icons/gustavo.png'
+							name='Gustavo Ribeiro'
+							title='Industrial Director - Waste Management Industry'
+						/>,
+						<TestimonialCard
+							testimonial='"The device brings more reliability to the process, speeding up the analysis of information and avoiding production stops, which positively impacts productivity."'
 							avatar='/icons/eduarda.png'
 							name='Eduarda Bauiz'
 							title='General Director - Food industry'
 						/>,
 						<TestimonialCard
-							testimonial='"Before Tractian, failure happened without us having any chance to
-						react. Now we are able to identify any unusual anomaly and this allows
-						us to intervene before the breakdown happens."'
-							avatar='/icons/eduarda.png'
-							name='Eduarda Bauiz'
-							title='General Director - Food industry'
-						/>,
-						<TestimonialCard
-							testimonial='"Before Tractian, failure happened without us having any chance to
-						react. Now we are able to identify any unusual anomaly and this allows
-						us to intervene before the breakdown happens."'
-							avatar='/icons/eduarda.png'
-							name='Eduarda Bauiz'
-							title='General Director - Food industry'
-						/>,
-						<TestimonialCard
-							testimonial='"Before Tractian, failure happened without us having any chance to
-						react. Now we are able to identify any unusual anomaly and this allows
-						us to intervene before the breakdown happens."'
-							avatar='/icons/eduarda.png'
-							name='Eduarda Bauiz'
-							title='General Director - Food industry'
-						/>,
-						<TestimonialCard
-							testimonial='"Before Tractian, failure happened without us having any chance to
-						react. Now we are able to identify any unusual anomaly and this allows
-						us to intervene before the breakdown happens."'
-							avatar='/icons/eduarda.png'
-							name='Eduarda Bauiz'
-							title='General Director - Food industry'
+							testimonial='"A child can install the Tractian sensor, and the platform is as easy to use as a social network. Every system is very simple and reliable."'
+							avatar='/icons/rene.png'
+							name='Renê Santos'
+							title='Mechanical Technician - Brewing Industry'
 						/>,
 					]}
 				/>

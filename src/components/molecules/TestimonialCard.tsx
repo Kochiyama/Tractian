@@ -14,23 +14,26 @@ export function TestimonialCard({ testimonial, avatar, name, title }: Props) {
 		<Flex
 			onDragStart={handleDragStart}
 			w='25rem'
+			minH='16rem'
+			p='1rem'
+			justifyContent='space-between'
 			flexDir='column'
 			bgColor='primary.200'
 			borderRadius='base'
-			p='1rem'
-			alignItems='flex-start'
 		>
-			<Image
-				mb='0.5rem'
-				h='1.5rem'
-				w='1.5rem'
-				src='/icons/quotes.png'
-				alt='Quotes'
-			/>
+			<Flex flexDir='column' alignItems='flex-start' mb='1rem'>
+				<Image
+					mb='0.5rem'
+					h='1.5rem'
+					w='1.5rem'
+					src='/icons/quotes.png'
+					alt='Quotes'
+				/>
 
-			<Text>{testimonial}</Text>
+				<Text>{testimonial}</Text>
 
-			<Image h='1rem' mb='2rem' src='/icons/stars.svg' alt='Five Starts' />
+				<Image h='1rem' src='/icons/stars.svg' alt='Five Starts' />
+			</Flex>
 
 			<Flex alignItems='center'>
 				<Image h='4rem' mr='1rem' src={avatar} alt={name} />
