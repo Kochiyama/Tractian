@@ -5,9 +5,14 @@ import { Section } from '../templates/Section'
 export function Footer() {
 	return (
 		<Section bgColor='brand.200'>
-			<Flex w='100%' justifyContent='space-between' mb='2rem'>
+			<Flex
+				flexDir={{ base: 'column', md: 'row' }}
+				w='100%'
+				justifyContent='space-between'
+				mb='2rem'
+			>
 				<Stack direction='column' spacing='0.2rem'>
-					<Heading size='sm' variant='light' mb='0.5rem'>
+					<Heading size='sm' variant='light' mt='2rem' mb='0.5rem'>
 						PRODUCT
 					</Heading>
 					<Link color='primary.100' href=''>
@@ -25,7 +30,7 @@ export function Footer() {
 				</Stack>
 
 				<Stack direction='column' spacing='0.2rem'>
-					<Heading size='sm' variant='light' mb='0.5rem'>
+					<Heading size='sm' variant='light' mt='2rem' mb='0.5rem'>
 						CONTENT
 					</Heading>
 					<Link color='primary.100' href=''>
@@ -43,7 +48,7 @@ export function Footer() {
 				</Stack>
 
 				<Stack direction='column' spacing='0.2rem'>
-					<Heading size='sm' variant='light' mb='0.5rem'>
+					<Heading size='sm' variant='light' mt='2rem' mb='0.5rem'>
 						ABOUT TRACTIAN
 					</Heading>
 					<Link color='primary.100' href=''>
@@ -61,7 +66,7 @@ export function Footer() {
 				</Stack>
 
 				<Stack direction='column' spacing='0.2rem'>
-					<Heading size='sm' variant='light' mb='0.5rem'>
+					<Heading size='sm' variant='light' mt='2rem' mb='0.5rem'>
 						CONTACT US
 					</Heading>
 					<Link color='primary.100' href=''>
@@ -78,30 +83,41 @@ export function Footer() {
 				</Stack>
 			</Flex>
 
-			<Flex w='100%' justifyContent='space-between'>
+			<Flex
+				flexDir={{ base: 'column', md: 'row' }}
+				w='100%'
+				justifyContent='space-between'
+			>
 				<Box>
-					<Heading size='sm' variant='light' mb='0.5rem'>
+					<Heading size='sm' variant='light' mt='2rem' mb='0.5rem'>
 						INVESTED BY
 					</Heading>
-					<Stack direction='row' spacing='2rem'>
+					<Stack direction={{ base: 'column', md: 'row' }} spacing='2rem'>
 						<Image
+							objectFit='contain'
 							h='2rem'
 							src='/icons/logo-citrino-branca.png'
 							alt='Citrino'
 						/>
 
 						<Image
+							objectFit='contain'
 							h='2rem'
 							src='/icons/logo-ycombinator-branca.png'
 							alt='Y Combinator'
 						/>
 
-						<Image h='2rem' src='/icons/logo-dfg-branca.png' alt='DGF' />
+						<Image
+							objectFit='contain'
+							h='2rem'
+							src='/icons/logo-dfg-branca.png'
+							alt='DGF'
+						/>
 					</Stack>
 				</Box>
 
 				<Box>
-					<Heading size='sm' variant='light' mb='0.5rem'>
+					<Heading size='sm' variant='light' mt='2rem' mb='0.5rem'>
 						RECOGNITION
 					</Heading>
 					<Stack direction='row' spacing='2rem'>
@@ -122,7 +138,7 @@ export function Footer() {
 				</Box>
 
 				<Box>
-					<Heading size='sm' variant='light' mb='0.5rem'>
+					<Heading size='sm' variant='light' mt='2rem' mb='0.5rem'>
 						CONNECT WITH TRACTIAN
 					</Heading>
 					<Stack direction='row' spacing='2rem'>
