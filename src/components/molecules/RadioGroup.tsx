@@ -7,18 +7,21 @@ import {
 	FormHelperText,
 } from '@chakra-ui/react'
 
-interface Props {
+interface Props extends RadioGroupProps {
 	name: string
 	label?: string
 	error?: string | undefined
 	touched?: boolean
-	radios: {
-		value: string
-		text: string
-	}[]
 }
 
-export function RadioGroup({ name, label, error, touched, radios }: Props) {
+export function RadioGroup({
+	name,
+	label,
+	error,
+	touched,
+	children,
+	...rest
+}: Props) {
 	return (
 		<FormControl w='100%'>
 			<FormLabel
@@ -35,12 +38,9 @@ export function RadioGroup({ name, label, error, touched, radios }: Props) {
 				color='primary.100'
 				d='flex'
 				justifyContent='space-between'
+				{...rest}
 			>
-				{radios.map(radio => (
-					<Radio key={radio.value} value={radio.value}>
-						{radio.text}
-					</Radio>
-				))}
+				{children}
 			</ChakraRadioGroup>
 
 			{error && touched && <FormHelperText>{error}</FormHelperText>}
