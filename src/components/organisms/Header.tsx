@@ -19,10 +19,6 @@ export function Header() {
 	}
 
 	useEffect(() => {
-		if (scrolledPercentage >= 100) {
-			return
-		}
-
 		const padding = 2 - 2 * (scrolledPercentage / 100)
 		if (padding <= 0.5) {
 			if (headerPadding !== '0.5rem') {
