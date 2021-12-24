@@ -9,6 +9,7 @@ import { HowItWorksSection } from '../components/organisms/HowItWorksSection'
 import { BigInfoSection } from '../components/organisms/BigInfoSection'
 import { TestimonialsSection } from '../components/organisms/TestimonialsSection'
 import { RequestFormSection } from '../components/organisms/RequestFormSection'
+import { Footer } from '../components/organisms/Footer'
 
 const Home: NextPage = () => {
 	return (
@@ -28,6 +29,8 @@ const Home: NextPage = () => {
 			<TestimonialsSection />
 
 			<RequestFormSection />
+
+			<Footer />
 		</MainTemplate>
 	)
 }
