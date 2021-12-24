@@ -14,7 +14,7 @@ export function HeroSection() {
 	return (
 		<Flex bgColor='brand.200' flexDir='column'>
 			<Container d='flex' alignItems='center'>
-				<Box flex='1'>
+				<Box flex='1' py='4rem'>
 					<Heading variant='light' size='lg'>
 						Revolutionizing the lives of <br />
 						maintenance professionals
@@ -36,7 +36,7 @@ export function HeroSection() {
 					</Button>
 				</Box>
 
-				<Center flex='1'>
+				<Center flex='1' d={{ base: 'none', md: 'flex' }}>
 					<Image maxW='40vw' src='/images/hero.svg' alt='Tractian' />
 				</Center>
 			</Container>

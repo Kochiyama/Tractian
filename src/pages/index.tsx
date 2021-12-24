@@ -14,7 +14,7 @@ import { Footer } from '../components/organisms/Footer'
 const Home: NextPage = () => {
 	return (
 		<MainTemplate>
-			{/* <HeroSection /> */}
+			<HeroSection />
 
 			{/* <FeaturesSection />
 
