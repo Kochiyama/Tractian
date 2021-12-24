@@ -11,6 +11,7 @@ import {
 	Box,
 	Center,
 	HStack,
+	Stack,
 } from '@chakra-ui/react'
 import { Section } from '../templates/Section'
 
@@ -28,9 +29,18 @@ export function FeaturesTabs({ tabs, panels }: Props) {
 		<Tabs defaultIndex={1}>
 			<TabPanels>
 				{panels.map(panel => (
-					<TabPanel key={panel.title} d='flex'>
+					<TabPanel
+						key={panel.title}
+						d='flex'
+						flexDir={{ base: 'column', md: 'row' }}
+					>
 						<Center flex='1' pr='4rem'>
-							<Image h='20rem' src={panel.img} alt={panel.title} />
+							<Image
+								objectFit='contain'
+								h={{ base: '10rem', md: '20rem' }}
+								src={panel.img}
+								alt={panel.title}
+							/>
 						</Center>
 						<Flex flex='1' flexDir='column' py='3rem'>
 							<Heading size='lg'>{panel.title}</Heading>
@@ -41,9 +51,14 @@ export function FeaturesTabs({ tabs, panels }: Props) {
 			</TabPanels>
 
 			<TabList mt='2rem' d='flex' justifyContent='center' border='none'>
-				<HStack spacing='2rem'>
+				<Stack
+					direction={{ base: 'column', md: 'row' }}
+					spacing='2rem'
+					w='100%'
+				>
 					{tabs.map((tab, i) => (
 						<Tab
+							justifyContent={{ base: 'flex-start', md: 'center' }}
 							key={i}
 							fontFamily='Poppins'
 							fontWeight='medium'
@@ -60,7 +75,7 @@ export function FeaturesTabs({ tabs, panels }: Props) {
 							{tab}
 						</Tab>
 					))}
-				</HStack>
+				</Stack>
 			</TabList>
 		</Tabs>
 	)

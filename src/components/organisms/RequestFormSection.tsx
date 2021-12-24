@@ -5,6 +5,7 @@ import {
 	Grid,
 	Heading,
 	Radio,
+	Stack,
 	Text,
 	useToast,
 } from '@chakra-ui/react'
@@ -64,7 +65,7 @@ export function RequestFormSection() {
 					bgColor='brand.200'
 					p='2rem'
 					flexDir='column'
-					minW='35rem'
+					minW={{ base: '100%', md: '35rem' }}
 					borderRadius='0.5rem'
 				>
 					<Heading variant='light'>
@@ -75,7 +76,7 @@ export function RequestFormSection() {
 
 					<form onSubmit={formik.handleSubmit}>
 						<Flex flexDir='column' mt='2rem'>
-							<Grid templateRows='repeat(3, 1fr)' gap='1.5rem' mb='2rem'>
+							<Stack direction='column' spacing='1.5rem' mb='2rem'>
 								<InputGroup
 									label='Name'
 									placeholder='Full Name'
@@ -94,7 +95,7 @@ export function RequestFormSection() {
 									touched={formik.touched.jobtitle}
 								/>
 
-								<Grid gridTemplateColumns='3fr 2fr' gap='1rem'>
+								<Stack direction={{ base: 'column', md: 'row' }} spacing='1rem'>
 									<InputGroup
 										label='Corporate Email'
 										placeholder='example@corps.com'
@@ -113,8 +114,8 @@ export function RequestFormSection() {
 										error={formik.errors.phone}
 										touched={formik.touched.phone}
 									/>
-								</Grid>
-							</Grid>
+								</Stack>
+							</Stack>
 
 							<RadioGroup
 								label='How many machines do you want to monitor?'
@@ -125,10 +126,12 @@ export function RequestFormSection() {
 								}}
 								value={machines}
 							>
-								<Radio value='10-20'>10-20</Radio>
-								<Radio value='21-30'>21-30</Radio>
-								<Radio value='31-50'>31-50</Radio>
-								<Radio value='50+'>More than 50</Radio>
+								<Stack direction={{ base: 'column', md: 'row' }} spacing='2rem'>
+									<Radio value='10-20'>10-20</Radio>
+									<Radio value='21-30'>21-30</Radio>
+									<Radio value='31-50'>31-50</Radio>
+									<Radio value='50+'>More than 50</Radio>
+								</Stack>
 							</RadioGroup>
 
 							<Button

@@ -13,7 +13,7 @@ export function TestimonialCard({ testimonial, avatar, name, title }: Props) {
 	return (
 		<Flex
 			onDragStart={handleDragStart}
-			w='25rem'
+			w={{ base: '100%', md: '25rem' }}
 			minH='16rem'
 			p='1rem'
 			justifyContent='space-between'
@@ -30,7 +30,7 @@ export function TestimonialCard({ testimonial, avatar, name, title }: Props) {
 					alt='Quotes'
 				/>
 
-				<Text>{testimonial}</Text>
+				<Text fontSize='sm'>{testimonial}</Text>
 
 				<Image h='1rem' src='/icons/stars.svg' alt='Five Starts' />
 			</Flex>

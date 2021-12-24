@@ -7,7 +7,12 @@ export function BenefitsSection() {
 		<Section>
 			<Heading mb='3rem'>Why Tractian?</Heading>
 
-			<Grid gridTemplateColumns='repeat(4, 1fr)' gap='2rem' spacing='2rem'>
+			<Grid
+				gridTemplateColumns={{ base: '1fr', md: 'repeat(4, 1fr)' }}
+				gridTemplateRows={{ base: 'repeat(4, 1fr)', md: '1fr' }}
+				gap='2rem'
+				spacing='2rem'
+			>
 				<BenefitCard
 					icon='/icons/icon-maintence-plataform.svg'
 					title='Predictive Maintenance'

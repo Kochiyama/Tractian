@@ -37,7 +37,7 @@ export function HowItWorksTabs({ tabs, panels }: Props) {
 
 	return (
 		<Tabs variant='enclosed'>
-			<TabList>
+			<TabList d='flex' flexDir={{ base: 'column', md: 'row' }}>
 				{tabs.map((tab, i) => (
 					<Tab
 						flex='1'
@@ -62,6 +62,7 @@ export function HowItWorksTabs({ tabs, panels }: Props) {
 						borderBottomRadius='base'
 						alignItems='center'
 						d='flex'
+						flexDir={{ base: 'column-reverse', md: 'row' }}
 					>
 						<VStack spacing='1rem' flex='1'>
 							{panel.items.map((item, i) => {
@@ -109,7 +110,7 @@ export function HowItWorksTabs({ tabs, panels }: Props) {
 
 						<Center flex='1' p='2rem'>
 							<Image
-								h='20rem'
+								h={{ base: '10rem', md: '20rem' }}
 								src={panel.items[selectedIndex].img}
 								alt={panel.items[selectedIndex].title}
 							/>

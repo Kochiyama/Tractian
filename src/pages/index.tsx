@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 		<MainTemplate>
 			<HeroSection />
 
-			{/* <FeaturesSection />
+			<FeaturesSection />
 
 			<ProductsSection />
 
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
 
 			<TestimonialsSection />
 
-			<RequestFormSection /> */}
+			<RequestFormSection />
 
 			<Footer />
 		</MainTemplate>

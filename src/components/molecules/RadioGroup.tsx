@@ -37,6 +37,7 @@ export function RadioGroup({
 				mt='1rem'
 				color='primary.100'
 				d='flex'
+				flexDir={{ base: 'column', md: 'row' }}
 				justifyContent='space-between'
 				{...rest}
 			>
