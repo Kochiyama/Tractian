@@ -54,7 +54,7 @@ export function FeaturesTabs({ tabs, panels }: Props) {
 				<Stack
 					direction={{ base: 'column', md: 'row' }}
 					spacing='2rem'
-					w='100%'
+					w={{ base: '100%', md: 'auto' }}
 				>
 					{tabs.map((tab, i) => (
 						<Tab
