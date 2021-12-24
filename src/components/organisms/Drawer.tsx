@@ -10,6 +10,7 @@ import {
 	Flex,
 } from '@chakra-ui/react'
 import { GiHamburgerMenu } from 'react-icons/gi'
+import { IoMdClose } from 'react-icons/io'
 import { LanguageSelect } from '../atoms/LanguageSelect'
 import { NavigationBar } from '../molecules/NavigationBar'
 
@@ -18,12 +19,16 @@ export function Drawer() {
 
 	return (
 		<>
-			<Button colorScheme='teal' onClick={onOpen} fontSize='1.5rem'>
-				<GiHamburgerMenu />
+			<Button
+				colorScheme='teal'
+				onClick={() => (isOpen ? onClose() : onOpen())}
+				fontSize='1.5rem'
+			>
+				{isOpen ? <IoMdClose /> : <GiHamburgerMenu />}
 			</Button>
-			<ChakraDrawer isOpen={isOpen} placement='right' onClose={onClose}>
+			<ChakraDrawer isOpen={isOpen} placement='top' onClose={onClose}>
 				<DrawerOverlay />
-				<DrawerContent bgColor='brand.200' color='primary.100'>
+				<DrawerContent pt='6rem' bgColor='brand.200' color='primary.100'>
 					<DrawerCloseButton />
 					<DrawerBody p='1rem'>
 						<NavigationBar direction='column' alignItems='flex-start' />
